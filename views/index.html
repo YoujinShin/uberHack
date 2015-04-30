@@ -1,1 +1,35 @@
-hello
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=utf-8 />
+	<title>Trip + Uber</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+	<stript src="js/vendor/bootstrap.js"></script>
+
+	<link href="css/main.css" rel="stylesheet" />
+	<link href="css/bootstrap.css" rel="stylesheet" />
+</head>
+
+
+<body>
+	<div id='intro'>Plan your <span class="strong">trip </span>with Uber !</div>
+	<div id='map'></div>
+
+	<input type="text" class="form-control" name="address" id="address" value="Enter City Name" onfocus="if (this.value == 'Enter City Name'){this.value='';} " style="z-index: 0;">
+	<button onclick="showAddress()" class="btn btn-default" type="button">
+		GO
+	</button>
+
+
+	<script src="js/main.js"></script>
+	<script src="js/map.js"></script>
+</body>
+
+</html>

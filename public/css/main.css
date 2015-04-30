@@ -1,22 +1,84 @@
+@font-face {
+	font-family: HelveticaNeue;
+	src: url(HelveticaNeue.ttf);
+}
 
+@font-face {
+	font-family: HelveticaN;
+	src: url(Helvetica.ttf);
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+@font-face {
+	font-family: HelveticaBd;
+	src: url(HelveticaBd.ttf);
+}
 
+@font-face {
+	font-family: HelveticaCd;
+	src: url(HelveticaCd.ttf);
+}
 
+body {
+	/*background-color: white;*/
+}
 
+#map {
+	position: absolute; top: 0; bottom: 0; left: 0;
+	width: 100%;
+}
 
+#intro {
+	text-transform: uppercase;
+	position: absolute;
+	width: 100%;
 
+	text-align: center;
+	top: 34%;
+	font-family: 'HelveticaN', sans-serif;
+	/*font-family: 'Open Sans', sans-serif;*/
+	letter-spacing: 2px;
+	z-index: 10;
+	font-size: 54px;
+	font-weight: 300;
+}
 
+.strong {
+	font-weight: 700;
+}
 
+input, button {
+	position: absolute;
+	z-index: 10;
+	top: 50%;
+}
 
+input {
+	font-family: 'Inconsolata', sans-serif !important;
+	height: 30px !important;
+	left: 30%;
+	width: 30% !important;
+	background-color: rgba(0,0,0,0) !important;
+	border: none !important;
+	box-shadow: none !important;
+	border-bottom: 1px solid black !important;
+	border-radius: 0px !important;
+	color: black !important;
+	font-size: 24px !important;
+	letter-spacing: 4px;
+}
 
+button {
 
+	font-family: 'HelveticaN', sans-serif !important;
+	font-size: 12px !important;
+	text-transform: uppercase;
 
-
-
-
-
-
-
+	letter-spacing: 2px;
+	color: white !important;
+	background-color: black !important;
+	background-image: none !important;
+	height: 40px !important;
+	left: 62%;
+	text-decoration: none !important;
+	/*padding: 20px !important;*/
+}
