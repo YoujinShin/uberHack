@@ -19,7 +19,8 @@
 }
 
 body {
-	/*background-color: white;*/
+	color: #000 !important;
+	font-family: 'HelveticaN', sans-serif !important;
 }
 
 #map {
@@ -27,18 +28,30 @@ body {
 	width: 100%;
 }
 
-#intro {
+.intro {
 	text-transform: uppercase;
 	position: absolute;
 	width: 100%;
 
 	text-align: center;
 	top: 34%;
-	font-family: 'HelveticaN', sans-serif;
-	/*font-family: 'Open Sans', sans-serif;*/
+	line-height: 120%;
 	letter-spacing: 2px;
 	z-index: 10;
-	font-size: 54px;
+	font-size: 50px;
+	font-weight: 300;
+}
+
+.intro2 {
+	position: absolute;
+	width: 100%;
+
+	text-align: center;
+	top: 34%;
+	line-height: 120%;
+	letter-spacing: 2px;
+	z-index: 10;
+	font-size: 50px;
 	font-weight: 300;
 }
 
@@ -46,10 +59,10 @@ body {
 	font-weight: 700;
 }
 
-input, button {
+input, #getCityButton {
 	position: absolute;
 	z-index: 10;
-	top: 50%;
+	top: 50.1%;
 }
 
 input {
@@ -68,17 +81,49 @@ input {
 }
 
 button {
-
 	font-family: 'HelveticaN', sans-serif !important;
-	font-size: 12px !important;
+	text-shadow: none !important;
 	text-transform: uppercase;
-
-	letter-spacing: 2px;
 	color: white !important;
 	background-color: black !important;
 	background-image: none !important;
+	text-decoration: none !important;
+	border-radius: 0px !important;
+	border: none !important;
+}
+
+#getCityButton {
+	font-size: 12px !important;
+	letter-spacing: 2px;
 	height: 40px !important;
 	left: 62%;
-	text-decoration: none !important;
-	/*padding: 20px !important;*/
 }
+
+#intro2_content {
+	visibility: hidden;
+}
+
+#addTripButton {
+	position: absolute;
+	z-index: 10;
+	font-size: 24px !important;
+	letter-spacing: 2px;
+	height: 40px !important;
+	left: 41%;
+	top: 50.1% ;
+}
+
+#addTripDes {
+	font-family: 'Inconsolata', sans-serif !important;
+	width: 100%;
+	position: absolute;
+	z-index: 10;
+	left: 45%;
+	top: 50.2% ;
+	height: 40px !important;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
