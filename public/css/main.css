@@ -19,6 +19,7 @@
 }
 
 body {
+	width: 100% !important;
 	color: #000 !important;
 	font-family: 'HelveticaN', sans-serif !important;
 }
@@ -85,11 +86,13 @@ button {
 	text-shadow: none !important;
 	text-transform: uppercase;
 	color: white !important;
-	background-color: black !important;
+	/*background-color: #4a86e8 !important;*/
 	background-image: none !important;
 	text-decoration: none !important;
 	border-radius: 0px !important;
 	border: none !important;
+	/*padding: 8px;*/
+	/*padding-left: 20px;*/
 }
 
 #getCityButton {
@@ -113,6 +116,24 @@ button {
 	top: 50.1% ;
 }
 
+.nav {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: #4a86e8;
+	padding: 8px;
+}
+
+#heading {
+	text-align: center;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	/*font-family: 'HelveticaN', sans-serif !important;*/
+	letter-spacing: 2px;
+}
+
 #addTripDes {
 	font-family: 'Inconsolata', sans-serif !important;
 	width: 100%;
@@ -125,5 +146,44 @@ button {
 	margin-bottom: auto;
 	font-size: 20px;
 	letter-spacing: 2px;
+}
+
+#others {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	background-color: none;
+}
+
+#addButton {
+	background: #4a86e8;
+	font-size: 32px;
+	padding: 6px;
+	margin-left: 30px;
+	visibility: hidden;
+}
+
+#addButton:hover {
+	opacity: 0.5;
+}
+
+.directionBox {
+	position: absolute;
+	background-color: white;
+	top: 40px;
+	left: 5px;
+	width: 300px; height: 100px;
+	z-index: 20;
+	visibility: hidden;
+}
+
+
+/*Zoom Control*/
+.leaflet-top .leaflet-control {
+	margin-top: 50px;
+}
+.leaflet-bar, .leaflet-control-layers {
+	border: none;
 }
 

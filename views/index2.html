@@ -8,8 +8,9 @@
 
 	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
 
 	<stript src="js/vendor/bootstrap.js"></script>
 	<!-- <stript src="js/vendor/jquery-1.9.1.min.js"></script> -->
@@ -24,26 +25,18 @@
 
 	<div id='map'></div>
 
-	<!-- intro  -->
-	<div id="intro_content">
-		<div class='intro'>Plan your <span class="strong">trip </span>with Uber!</div>
-		
+	<div class="nav">
+		<div id="heading">
+			<a href="/" style="color:white; text-decoration: none">
+				<span class="strong">PLAN YOUR TRIP</span> WITH UBER</div>
+			</a>
+		</div>
 
-		<input type="text" class="form-control" name="address" id="address" value="Enter City Name" onfocus="if (this.value == 'Enter City Name'){this.value='';} " style="z-index: 0;">
-		<button id='getCityButton' onclick="showAddress()" class="btn btn-default" type="button">
-			GO
-		</button>
+		<div id="others">
+			<button id="addButton">+</button>
+			<div class="directionBox"></div>
+		</div>
 	</div>
-
-	<!-- city name intro -->
-	<div id='intro2_content'>
-		<div id="cityname" class="intro2"><span class="strong">Cambridge</span></div>
-		<button id="addTripButton" onclick="addTrip()" class="btn btn-default" type="button">
-			+
-		</button>
-		<div id="addTripDes">Click to add your trip !</div>
-	</div>
-
 
 	<!-- javascript files -->
 	<script src="js/map.js"></script>
