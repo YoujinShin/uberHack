@@ -13,3 +13,8 @@ exports.index = function(req, res) {
 	console.log('main page requested');
 	res.render('index2.html');
 }
+
+exports.test = function(req, res) {
+	console.log('test page requested');
+	res.render('test.html');
+}

@@ -9,21 +9,34 @@
 	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-
-	<stript src="js/vendor/bootstrap.js"></script>
-	<!-- <stript src="js/vendor/jquery-1.9.1.min.js"></script> -->
 
 	<link href="css/main.css" rel="stylesheet" />
 	<link href="css/bootstrap.css" rel="stylesheet" />
+
+	<style>
+		.ui-widget {
+			font-family: 'Open Sans', sans-serif !important;
+			font-size: 14px !important;
+		}
+
+		.ui-widget-header {
+			font-weight: normal !important;
+			background: none !important;
+			border: none !important;
+		}
+	</style>
 </head>
 
 
-<body>
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<body>		
+	<!-- // <script src="//code.jquery.com/jquery-1.11.2.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<stript src="js/vendor/bootstrap.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/d3.js"></script>
+	
 
-	<div id='map'></div>
+	<!-- <div id='map'></div> -->
 
 	<div class="nav">
 		<div id="heading">
@@ -32,15 +45,73 @@
 			</a>
 		</div>
 
+		<div id="cityname">|  CAMBRIDGE</div>
+
 		<div id="others">
-			<button id="addButton">+</button>
-			<div class="directionBox"></div>
+			<!-- <button id="addButton">+</button> -->
+
+<!-- 			<div class="directionBox">
+				<input type="text" id="starting_point" class="form-control" name="address" id="address" value="Starting point" onfocus="if (this.value == 'Starting point'){this.value='';} " style="z-index: 0;">
+
+		        <input type="text" name="testdate" id="starting_date" class="form-control date_select" value="01/01/2015" style="z-index: 10;" required/>
+				
+				<br>
+				<input type="text" id="destination_point" class="form-control" name="address" id="address" value="Destination" onfocus="if (this.value == 'Destination'){this.value='';} " style="z-index: 0;">
+
+				<input type="text" name="testdate" id="destination_date" class="form-control date_select" value="01/01/2015" style="z-index: 10;" required/>
+			</div> -->
+		</div>
+
+
+
+		<div id="dashboard">
+			<div class="row">
+
+				<div class="col-md-4">
+					DATE
+					<br>
+					<input type="text" name="testdate" id="date" class="form-control date_select" value="01/01/2015" style="z-index: 70;" required/>
+				
+				</div>
+
+				<div class="col-md-4">
+					PRICE
+					<br>
+					<input type="text" name="testdate" id="price" class="form-control" value="$20 - $40" style="z-index: 70;" onfocus="if (this.value == '$20 - $40'){this.value='';}" required/>
+				</div>
+
+				<div class="col-md-4">
+					TRAVEL TIME
+					<br>
+					<input type="text" name="testdate" id="time" class="form-control" value="00:00:00" style="z-index: 70;" onfocus="if (this.value == '00:00:00'){this.value='';}" required/>
+				</div>
+
+	
+			</div>
+			<!-- <img id="uberx" src='uberx.png' width="60px"> -->
 		</div>
 	</div>
 
+
+	<div id='map'></div> 
+
+
 	<!-- javascript files -->
+	 <script type="text/javascript">
+		$(function() {
+			$('.date_select').datepicker();
+		});  
+	</script> 
+	
+
+	<script src="js/viz.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/main.js"></script>
-</body>
+	<!-- <stript src="js/jquery.datetimepicker.js"></script> -->
 
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+ 
+</body>	
 </html>

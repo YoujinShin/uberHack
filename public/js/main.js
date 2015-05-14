@@ -22,6 +22,15 @@
 // 	});
 // }
 
+
+// date picker /////////////////////////////////////////////////////// 
+ // $(function() {
+ //    $('#datetimepicker1').datetimepicker({
+ //      language: 'pt-BR'
+ //    });
+ //  });
+
+
 function showAddress() {
 	var address = $("#address").val();
 	map.setView([42.3783904,-71.11290], 13);
