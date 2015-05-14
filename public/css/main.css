@@ -20,7 +20,6 @@
 
 body {
 	width: 100% !important;
-	/*min-width: 800px !important;*/
 	color: #000 !important;
 	font-family: 'HelveticaN', sans-serif !important;
 }
@@ -62,39 +61,14 @@ body {
 	font-weight: 700;
 }
 
-/*input, #getCityButton {
-	position: absolute;
-	z-index: 10;
-	top: 50.1%;
-}
-
 input {
-	font-family: 'Inconsolata', sans-serif !important;
-	height: 30px !important;
-	left: 30%;
-	width: 30% !important;
-	background-color: rgba(0,0,0,0) !important;
-	border: none !important;
-	box-shadow: none !important;
-	border-bottom: 1px solid black !important;
-	border-radius: 0px !important;
-	color: black !important;
-	font-size: 24px !important;
-	letter-spacing: 4px;
-}*/
-
-input {
-	/*position: absolute;*/
 	background-color: rgba(255,255,255,0) !important;
 	border: none !important;
 	box-shadow: none !important;
-	/*border-bottom: 1px solid #4a86e8 !important;*/
-	/*border-bottom: 1px solid #ccc !important;*/
 	border-radius: 0px !important;
 
 	font-family: 'Open Sans', sans-serif;
-	/*color: #222 !important;*/
-	font-size: 24px !important;
+	font-size: 18px !important;
 	font-weight: 300 !important;
 	text-transform: uppercase !important;
 	letter-spacing: 2px;
@@ -102,20 +76,18 @@ input {
 	margin-left: auto !important;
 	margin-right: auto !important;
 
-	width: 50% !important;
-
-	height: 50px !important;
 	padding: 2px !important;
-	margin-top: 12px !important;
-	margin-bottom: 0px !important;
+	margin-top: 5px !important;
+	margin-bottom: 10px !important;
 	text-align: center;
 
-	/*color: #fff !important;*/
-	color: #000 !important;
-	/*margin-left: 50px !important;*/
+	color: #fff !important;
+}
 
-	/*vertical-align: text-bottom !important;*/
-	/*z-index: 60;*/
+hr {
+	margin-top: 2px !important;
+	margin-bottom: 2px !important;
+	opacity: 0.4 !important;
 }
 
 button {
@@ -123,14 +95,11 @@ button {
 	text-shadow: none !important;
 	text-transform: uppercase;
 	color: white !important;
-	/*margin: 0px !important;*/
-	/*background-color: #4a86e8 !important;*/
+
 	background-image: none !important;
 	text-decoration: none !important;
 	border-radius: 0px !important;
 	border: none !important;
-	/*padding: 8px;*/
-	/*padding-left: 20px;*/
 }
 
 #getCityButton {
@@ -169,7 +138,6 @@ button {
 	color: white;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
-	/*font-family: 'HelveticaN', sans-serif !important;*/
 	letter-spacing: 2px;
 }
 
@@ -191,21 +159,19 @@ button {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	/*z-index: 10;*/
 	background-color: none;
 }
 
 #addButton {
 	position: absolute;
-	top: -7px;
+	top: 580px;
 	background: #4a86e8;
-	font-size: 28px;
-	padding: 4px;
-	margin-top: auto;
-	margin-bottom: auto;
-	margin-left: 38px;
-	height: 35px;
-	color: #fdf733 !important;
+	font-size: 20px;
+	padding: 1px;
+	width: 30px;
+
+	margin-left: 5px;
+	color: white;
 	z-index: 2;
 
 	visibility: hidden;
@@ -217,7 +183,7 @@ img {
 }
 
 #addButton:hover {
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 #cityname {
@@ -226,10 +192,12 @@ img {
 	font-family: 'Open Sans', sans-serif;
 	color: white;
 	font-size: 11px;
-	right: 10px;
+	left: 5px;
 	top: 2px;
-	padding: 10px;	
+	padding: 10px;
+
 	letter-spacing: 1px;
+	font-weight: 600;
 	visibility: hidden;
 }
 
@@ -242,7 +210,6 @@ img {
 	width: 280px; height: 180px;
 	z-index: 2;
 	visibility: hidden;
-	/*box-shadow: 4px 4px 1px rgba(0,0,0,0.1);*/
 	font-family: 'Open Sans', sans-serif;
 	padding: 15px;
 	font-size: 12px;
@@ -251,7 +218,6 @@ img {
 .pin_class {
 	position: absolute;
 	z-index: 50 !important;
-	/*border: red 1px solid;*/
 }
 
 #uberx {
@@ -271,36 +237,50 @@ img {
 	border-radius: 4px;
 	pointer-events: none;
 	color: #fff;
-	background-color: rgba(0,0,0,0.7);
-	visibility: hidden;
-	/*font-family: Georgia, Arial, Helvetica, sans-serif !important;*/
+	background-color: rgba(0,0,0,0.65);
 }
 
 #dashboard {
 	position: absolute;
 	z-index: 20;
 	border-radius: 10px;
-	background-color: rgba(255,255,255,0.8);
-	/*background-color: rgba(50,50,50,0.7);*/
-	/*background-color: rgba(0,0,0,0.7);*/
+	background-color: rgba(0,0,0,0.4);
 	bottom: 15px;
 
 	left:5%;
 	width: 90%; 
 	height: 110px;
 	visibility: hidden;
-	/*box-shadow: 4px 4px 1px rgba(0,0,0,0.1);*/
 	font-family: 'Open Sans', sans-serif;
 	padding: 15px;
 	font-size: 13px;
 	letter-spacing: 2px;
 	color: #4a86e8;
-	/*color: rgba(160,160,160,1);*/
 	font-weight: 600;
 
 	text-align: center;
+}
 
-	/*border: 1px solid #4a86e8;*/
+#dashboard_ver {
+	position: absolute;
+	z-index: 20;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0.65);
+	top: 190px;
+
+	left: 5px;
+	width: 160px; 
+	height: 380px;
+	visibility: hidden;
+
+	font-family: 'Open Sans', sans-serif;
+	padding: 20px;
+	font-size: 11px;
+	letter-spacing: 2px;
+	color: #4a86e8;
+	font-weight: 600;
+
+	text-align: center;
 }
 
 .add {
@@ -309,12 +289,15 @@ img {
 }
 
 
-
 /*Zoom Control*/
 .leaflet-top .leaflet-control {
-	margin-top: 50px;
+	margin-top: 60px;
 }
 .leaflet-bar, .leaflet-control-layers {
 	border: none;
+}
+
+.leaflet-bar, .leaflet-control-layers {
+	opacity: 0.8;
 }
 

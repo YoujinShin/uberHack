@@ -1,0 +1,85 @@
+.trip {
+	position: absolute;
+	z-index: 50;
+	right: 5px;
+
+	width: 100px;
+	height: 30px;
+	color: white;
+	background: rgba(0,0,0,0.7);
+	border-radius: 5px;
+
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 10px;
+	letter-spacing: 2px;
+	padding: 8px;
+}
+
+.trip:hover {
+	opacity: 0.8;
+}
+
+#trip1 {
+	top: 190px;
+}
+#trip2 {
+	top: 230px;
+}
+#trip3 {
+	top: 270px;
+}
+#trip4 {
+	top: 310px;
+}
+#trip5 {
+	top: 350px;
+}
+
+.deleteButton {
+	position: absolute;
+	z-index: 100;
+	right: 5px;
+	background: #4a86e8;
+
+	width: 22px;
+	height: 30px;
+	color: white;
+	background: #4a86e8;
+	border-radius: 0px;
+	text-align: center;
+
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	letter-spacing: 1px;
+	padding: 4px;
+}
+
+.deleteButton:hover {
+	opacity: 0.8;
+}
+
+.completeButton {
+	position: absolute;
+	/*top: 580px;*/
+	top: 7px;
+	background: rgba(255,255,255,1);
+	font-size: 9px;
+	padding: 6px;
+	width: 100px;
+
+	right: 5px;
+	color: #4a86e8;
+	z-index: 80;
+	border-radius: 0px;
+	border: 1px #4a86e8 solid;
+
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 1px;
+	visibility: hidden;
+}
+
+.completeButton:hover {
+	opacity: 0.8;
+}

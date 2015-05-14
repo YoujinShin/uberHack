@@ -11,6 +11,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
 	<link href="css/main.css" rel="stylesheet" />
+	<link href="css/viz.css" rel="stylesheet" />
 	<link href="css/bootstrap.css" rel="stylesheet" />
 
 	<style>
@@ -64,33 +65,35 @@
 
 
 
-		<div id="dashboard">
-			<div class="row">
+		<div id="dashboard_ver">
+			<!-- <div class="row"> -->
 
-				<div class="col-md-4">
+				<!-- <div class="col-md-4"> -->
+				<span style="color:white">TRAVEL INFORMATION</span>
+				<br>
+				<hr><br><br>
 					DATE
-					<br>
+					
 					<input type="text" name="testdate" id="date" class="form-control date_select" value="01/01/2015" style="z-index: 70;" required/>
-				
-				</div>
+				<!-- </div> -->
 
-				<div class="col-md-4">
+				<!-- <div class="col-md-4"> --><br><br>
 					PRICE
-					<br>
 					<input type="text" name="testdate" id="price" class="form-control" value="$20 - $40" style="z-index: 70;" onfocus="if (this.value == '$20 - $40'){this.value='';}" required/>
-				</div>
+				<!-- </div> -->
 
-				<div class="col-md-4">
-					TRAVEL TIME
-					<br>
+				<!-- <div class="col-md-4"> --><br><br>
+					TIME
 					<input type="text" name="testdate" id="time" class="form-control" value="00:00:00" style="z-index: 70;" onfocus="if (this.value == '00:00:00'){this.value='';}" required/>
-				</div>
 
-	
-			</div>
-			<!-- <img id="uberx" src='uberx.png' width="60px"> -->
+				<br><hr>
+				<!-- </div> -->
+
+			<!-- </div> -->
 		</div>
 	</div>
+
+	<button id="addButton">+</button>
 
 
 	<div id='map'></div> 

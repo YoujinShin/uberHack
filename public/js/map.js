@@ -1,14 +1,15 @@
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2Vuc2VhYmxlIiwiYSI6ImxSNC1wc28ifQ.hst-boAjFCngpjzrbXrShw';
 
 var map = L.map('map', {
-	zoomControl: false
+	// zoomControl: false
 }).setView([40 , 0], 4);
 
 map.scrollWheelZoom.disable();
-new L.Control.Zoom({ position: 'topright' }).addTo(map);
+// new L.Control.Zoom({ position: 'topright' }).addTo(map);
 
 var baseLayer = L.mapbox.tileLayer('examples.map-20v6611k');
-baseLayer.setOpacity(0.8);
+// var baseLayer = L.mapbox.tileLayer('senseable.kakb3n74');
+baseLayer.setOpacity(1);
 baseLayer.setZIndex(0);
 baseLayer.addTo(map);
 
@@ -16,13 +17,18 @@ baseLayer.addTo(map);
 //// City Layer
 var cityLayer = L.mapbox.featureLayer();
 
-
 var cambridge = L.marker([42.3783904,-71.1129097], {
-  icon: L.mapbox.marker.icon({ 'marker-color': '#4a86e8' })
+  icon: L.mapbox.marker.icon({ 
+  	'marker-size': 'large',
+  	'marker-color': '#4a86e8' 
+  })
 }).addTo(cityLayer);
 
 var sanfran = L.marker([37.7577,-122.4376], {
-  icon: L.mapbox.marker.icon({ 'marker-color': '#4a86e8' })
+  icon: L.mapbox.marker.icon({ 
+  	'marker-size': 'large',
+  	'marker-color': '#4a86e8' 
+  })
 }).addTo(cityLayer);
 
 cityLayer.addTo(map);
@@ -55,10 +61,10 @@ var pin_end = L.marker([42.3783904,-71.1129097], {
 
 
 var polyline_options = {
-    // color: '#4a86e8',
-    color: '#000',
+    color: '#4a86e8',
+    // color: '#000',
     weight: 2,
-    opacity: 0.4
+    opacity: 0.6
 };
 
 var route = L.polyline([[-77, 37.9], [-233.9, 36.5]], 
@@ -69,6 +75,7 @@ var route = L.polyline([[-77, 37.9], [-233.9, 36.5]],
 //// Map Init
 map.setView([40.447069, -95.237515], 4);
 
+
 //// City Selected
 cityLayer.on('click', function(e) {
 
@@ -78,13 +85,13 @@ cityLayer.on('click', function(e) {
 	if(lat == 42.3783904) { $('#cityname').text('| CAMBRIDGE'); }
 	else if(lat == 37.7577) { $('#cityname').text('| SAN FRANCISCO'); }
 
-	map.setView(e.layer.getLatLng(), 14);
+	map.setView(e.layer.getLatLng(), 13);
 	// baseLayer.setOpacity(0.5);
 
-	start_lat = map.containerPointToLatLng([150,300]).lat;
-	start_lng = map.containerPointToLatLng([150,300]).lng
-	end_lat = map.containerPointToLatLng([150,500]).lat;
-	end_lng = map.containerPointToLatLng([150,500]).lng
+	start_lat = map.containerPointToLatLng([450,300]).lat;
+	start_lng = map.containerPointToLatLng([450,300]).lng
+	end_lat = map.containerPointToLatLng([750,500]).lat;
+	end_lng = map.containerPointToLatLng([750,500]).lng
 
 	pin_start.setLatLng( [start_lat, start_lng] );  //140
 	pin_end.setLatLng( [end_lat, end_lng] );
@@ -97,7 +104,17 @@ cityLayer.on('click', function(e) {
 	$('#addButton').css('visibility', 'visible');
 	$('.directionBox').css('visibility', 'visible');
 	$('#cityname').css('visibility', 'visible');
-	$('#dashboard').css('visibility', 'visible');
+	$('#dashboard_ver').css('visibility', 'visible');
+	$('.completeButton').css('visibility', 'visible');
+
+	// Tooltip
+	mid_lat = (start_lat + end_lat)/2;
+	mid_lng = (start_lng + end_lng)/2;
+
+	mid_x = map.latLngToContainerPoint([mid_lat, mid_lng]).x;
+	mid_y = map.latLngToContainerPoint([mid_lat, mid_lng]).y;
+
+	tooltip.style("top", mid_y+"px").style("left",mid_x+"px");
 });
 
 
